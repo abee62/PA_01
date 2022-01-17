@@ -9,6 +9,7 @@
 </head>
 <body style="background-color:rgb(204, 217, 230);">
 
+<!-- bootstrap for navigation bar-->  
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Encrypto-Decrypto</a>
@@ -25,26 +26,27 @@
     <h1>Welcome to Encrypto-Decrypto!</h1>
 </div>
 <br>
-<div class="container" >
-  
+
+<!-- Container with the text areas -->
+<div class="container" >  
   <form action='/encrypt' method='get'>
     <div class="mb-3">
       <label for="plaintext_area" class="form-label">Plain Text</label>
-      <textarea name="text" class="form-control" id="plaintext_area" rows="6">
-        {{decrypted_text}}
+      <textarea name="text" class="form-control" id="plaintext_area" rows="6"> 
+        {{decrypted_text}} 
       </textarea>
-      <div id="emailHelp" class="form-text">Type your message to be encrypted!</div>
+      <div id="encryptHelp" class="form-text">Type your message to be encrypted!</div>
       <button type="submit" class="btn btn-primary">Encrypt</button>
     </div>
   </form>
   
   <form action='/decrypt' method='get'>
     <div class="mb-3">
-        <label for="plaintext_area" class="form-label">Encrypted Text</label>
-        <textarea name="text" class="form-control" id="plaintext_area" rows="6">
-          {{encrypted_text}}
+        <label for="cyphertext_area" class="form-label">Encrypted Text</label>
+        <textarea name="text" class="form-control" id="cyphertext_area" rows="6"> 
+          {{encrypted_text}} 
         </textarea>
-        <div id="emailHelp" class="form-text">Type your message to be decrypted!</div>
+        <div id="decryptHelp" class="form-text">Type your message to be decrypted!</div>
         <button type="submit" class="btn btn-primary">Decrypt</button>
     </div>
       
